@@ -1,0 +1,89 @@
+*{
+    font-family: 'Segoe UI';
+}
+html{
+    background: rgb(164,181,0);
+    background: linear-gradient(311deg,
+    rgb(252, 136, 136) 0%,
+    rgb(116, 83, 97) 100%);
+    height: 100vh;
+}
+.container{
+    margin-top: 2rem;
+    text-align: center;
+    color: white;
+}
+.list-container{
+    display: flex;
+    justify-content: center;
+}
+.add{
+    transform: scale(2);
+    margin-left: 1rem;
+    cursor: pointer;
+    color: rgb(0, 97, 177);
+}
+ul {
+    text-align: start;
+    padding: 0;
+    list-style: none;
+}
+li {
+    width: 20rem;
+    margin: 10px 7px;
+    overflow-wrap: break-word;
+    box-shadow: 0 0 5px 1px rgb(255, 255, 255);
+    padding: 7px;
+    color: white;
+    font-weight: 600;
+}
+.form input{
+    width: 32rem;
+    padding: 5px;
+    font-size: 20px;
+    margin-right: 10px;
+    outline: 0;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todoButton {
+    height: 25px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    transform: scale(1.5);
+}
+.del{
+    color: red;
+    transform: scale(1.5);
+    cursor: pointer;
+    margin: 0 5px;
+}
+.done {
+    color: rgb(4, 134, 0);
+    transform: scale(1.5);
+    cursor: pointer;
+    margin: 0 5px;
+}
+.todoDiv {
+    display: flex;
+    align-items: center;
+}
+i:hover{
+    color: white;
+}
+#todos{
+    outline: none;
+    padding: 5px;
+    margin-left: 2rem;
+}
+.remove li {
+    text-decoration: line-through;
+    box-shadow: 0 0 5px 1px rgb(9, 255, 1);
+}
