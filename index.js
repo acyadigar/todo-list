@@ -3,12 +3,10 @@ const button = document.querySelector(".add");
 const todoList = document.querySelector(".todoList");
 document.addEventListener('DOMContentLoaded', loadTodos)
 document.querySelector('#todos').addEventListener('change', todoFilter)
-button.addEventListener("click", addTodo);
-
-
-
+button.addEventListener('click', addTodo);
 
 function addTodo() {
+  if(!!input.value){
     const div = document.createElement("div");
     const li = document.createElement("li");
     const deleteButton = document.createElement("i");
@@ -39,6 +37,7 @@ function addTodo() {
 
     const doneTodo = document.querySelectorAll('.done');
     doneTodo.forEach((button) => button.addEventListener('click', dashedTodo));
+  }
 }
 
 function todoFilter(){
@@ -117,20 +116,15 @@ function loadTodos () {
       div.appendChild(doneButton);
       li.textContent = todo
       window.localStorage.todos = JSON.stringify(todos)
-      
+
       const delTodo = document.querySelectorAll(".del");
       delTodo.forEach((button) => button.addEventListener("click", deleteTodo));
   
       const doneTodo = document.querySelectorAll('.done');
       doneTodo.forEach((button) => button.addEventListener('click', dashedTodo));
-  
     })
   }
-  else {
-    console.log('fuck');
-  }
 }
-
 
 function deleteTodo() {
   const todo = this.parentElement;
@@ -141,4 +135,8 @@ function deleteTodo() {
 function dashedTodo() {
   const todos = this.parentElement
   todos.classList.toggle('remove')
+  delFromLocalStore(this.parentElement.textContent)
+  if(todos.classList.value == 'todoDiv'){
+    saveLocalStore(this.parentElement.textContent)
+  }
 }

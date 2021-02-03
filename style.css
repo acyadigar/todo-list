@@ -49,16 +49,6 @@ li {
     align-items: center;
     justify-content: center;
 }
-.todoButton {
-    height: 25px;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    transform: scale(1.5);
-}
 .del{
     color: red;
     transform: scale(1.5);
@@ -80,10 +70,14 @@ i:hover{
 }
 #todos{
     outline: none;
-    padding: 5px;
-    margin-left: 2rem;
+    padding: 7px;
+    margin-left: 1.6rem;
 }
 .remove li {
     text-decoration: line-through;
     box-shadow: 0 0 5px 1px rgb(9, 255, 1);
+}
+h1{
+    text-shadow: 1px 1px 11px black;
+    font-size: 3rem;
 }
